@@ -11,37 +11,17 @@ EndProject
 Global
 	GlobalSection(SolutionConfiguration) = preSolution
 		Debug = Debug
-		Debug DLL = Debug DLL
 		Release = Release
-		Release DLL = Release DLL
-		Unicode Debug = Unicode Debug
-		Unicode Release = Unicode Release
 	EndGlobalSection
 	GlobalSection(ProjectConfiguration) = postSolution
 		{FD24F230-5315-445F-AC80-DCC4C6F7FBBE}.Debug.ActiveCfg = Debug|Win32
 		{FD24F230-5315-445F-AC80-DCC4C6F7FBBE}.Debug.Build.0 = Debug|Win32
-		{FD24F230-5315-445F-AC80-DCC4C6F7FBBE}.Debug DLL.ActiveCfg = Debug DLL|Win32
-		{FD24F230-5315-445F-AC80-DCC4C6F7FBBE}.Debug DLL.Build.0 = Debug DLL|Win32
 		{FD24F230-5315-445F-AC80-DCC4C6F7FBBE}.Release.ActiveCfg = Release|Win32
 		{FD24F230-5315-445F-AC80-DCC4C6F7FBBE}.Release.Build.0 = Release|Win32
-		{FD24F230-5315-445F-AC80-DCC4C6F7FBBE}.Release DLL.ActiveCfg = Release DLL|Win32
-		{FD24F230-5315-445F-AC80-DCC4C6F7FBBE}.Release DLL.Build.0 = Release DLL|Win32
-		{FD24F230-5315-445F-AC80-DCC4C6F7FBBE}.Unicode Debug.ActiveCfg = Unicode Debug|Win32
-		{FD24F230-5315-445F-AC80-DCC4C6F7FBBE}.Unicode Debug.Build.0 = Unicode Debug|Win32
-		{FD24F230-5315-445F-AC80-DCC4C6F7FBBE}.Unicode Release.ActiveCfg = Unicode Release|Win32
-		{FD24F230-5315-445F-AC80-DCC4C6F7FBBE}.Unicode Release.Build.0 = Unicode Release|Win32
 		{9DE82691-3E15-4BD3-B668-69AEC47CC399}.Debug.ActiveCfg = Debug|Win32
 		{9DE82691-3E15-4BD3-B668-69AEC47CC399}.Debug.Build.0 = Debug|Win32
-		{9DE82691-3E15-4BD3-B668-69AEC47CC399}.Debug DLL.ActiveCfg = Debug DLL|Win32
-		{9DE82691-3E15-4BD3-B668-69AEC47CC399}.Debug DLL.Build.0 = Debug DLL|Win32
 		{9DE82691-3E15-4BD3-B668-69AEC47CC399}.Release.ActiveCfg = Release|Win32
 		{9DE82691-3E15-4BD3-B668-69AEC47CC399}.Release.Build.0 = Release|Win32
-		{9DE82691-3E15-4BD3-B668-69AEC47CC399}.Release DLL.ActiveCfg = Release DLL|Win32
-		{9DE82691-3E15-4BD3-B668-69AEC47CC399}.Release DLL.Build.0 = Release DLL|Win32
-		{9DE82691-3E15-4BD3-B668-69AEC47CC399}.Unicode Debug.ActiveCfg = Unicode Debug|Win32
-		{9DE82691-3E15-4BD3-B668-69AEC47CC399}.Unicode Debug.Build.0 = Unicode Debug|Win32
-		{9DE82691-3E15-4BD3-B668-69AEC47CC399}.Unicode Release.ActiveCfg = Unicode Release|Win32
-		{9DE82691-3E15-4BD3-B668-69AEC47CC399}.Unicode Release.Build.0 = Unicode Release|Win32
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 	EndGlobalSection

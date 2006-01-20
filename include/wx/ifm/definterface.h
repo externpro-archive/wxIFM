@@ -504,7 +504,7 @@ private:
         \param orientation What side of the component is the orientation on. One of
         IFM_ORIENTATION_LEFT, IFM_ORIENTATION_TOP, IFM_ORIENTATION_RIGHT, IFM_ORIENTATION_BOTTOM
     */
-        void DrawCaption(wxDC &dc, const wxRect &rect, const wxString &caption, int orientation);
+    void DrawCaption(wxDC &dc, const wxRect &rect, const wxString &caption, int orientation);
 
     /*!
         Updates the sizes for the tabs of this component. If

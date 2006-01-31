@@ -1,24 +1,31 @@
-# This is a sample target.mk file, used to jump from a source directory to a
-# target directory.  This version allows for both an optional _common and an
-# architecture specific target directory.
+# <sdlOwner name='David Russak' email='david.russak@sdl.usu.edu' />
+################################################################################
+# This file and the multi-architecture build idea was borrowed from the website
+# http://make.paulandlesley.org/multi-arch.html. Much of the commentary and code
+# below is from the above source.
+# This is script is used to jump from a source directory to a target directory.
 #
+# Author:
+#   David Russak
+#
+# Revisions
+#   ??Dec05 David Russak Created.
+#   31Jan06 David Russak Added comments
+#
+################################################################################
 
 .SUFFIXES:
 
-# OBJDIR obtained from top level make export
-
 # Define the rules to build in the target subdirectories.
+# The change directory command is given with the make command -C.
 #
 MAKETARGET = $(MAKE) --no-print-directory -C $@ -f $(CURDIR)/Makefile \
 		SRCDIR=$(CURDIR) $(MAKECMDGOALS)
 
-.PHONY: $(OBJDIR) $(EXTRATARGETS)
-$(OBJDIR) $(EXTRATARGETS):
+.PHONY: $(OBJDIR) clean subclean distclean
+$(OBJDIR):
 	+@[ -d $@ ] || mkdir -p $@
 	+@$(MAKETARGET)
-
-$(OBJDIR) : $(EXTRATARGETS)
-
 
 # These rules keep make from trying to use the match-anything rule below to
 # rebuild the makefiles--ouch!  Obviously, if you don't follow my convention
@@ -28,20 +35,12 @@ $(OBJDIR) : $(EXTRATARGETS)
 Makefile : ;
 %.mk :: ;
 
-
-# Anything we don't know how to build will use this rule.  The command is a
-# do-nothing command, but the prerequisites ensure that the appropriate
-# recursive invocations of make will occur.
-#
-% :: $(EXTRATARGETS) $(OBJDIR) ;
-
-
-# The clean rule is best handled from the source directory: since we're
+# The clean rules are best handled from the source directory: since we're
 # rigorous about keeping the target directories containing only target files
 # and the source directory containing only source files, `clean' is as trivial
 # as removing the target directories!
 #
-.PHONY: clean
-clean:
-	$(if $(EXTRATARGETS),rm -f $(EXTRATARGETS)/*)
+
+clean subclean distclean:
 	rm -rf $(OBJDIR)
+

@@ -10,7 +10,8 @@
 #
 # Revisions
 #   ??Dec05 David Russak Created.
-#   31Jan06 David Russak Added comments
+#   26Jan06 David Russak Added comments
+#   06Mar06 David Russak Added rule to create locals.mk if needed. 
 #
 ################################################################################
 
@@ -22,10 +23,16 @@
 MAKETARGET = $(MAKE) --no-print-directory -C $@ -f $(CURDIR)/Makefile \
 		SRCDIR=$(CURDIR) $(MAKECMDGOALS)
 
-.PHONY: $(OBJDIR) clean subclean distclean
-$(OBJDIR):
+.PHONY: $(OBJDIR) make_locals clean subclean distclean
+$(OBJDIR): make_locals
 	+@[ -d $@ ] || mkdir -p $@
 	+@$(MAKETARGET)
+
+# Make the locals.mk make file if needed.
+make_locals: $(BIN_PATH)/locals.mk
+
+$(BIN_PATH)/locals.mk:
+	$(MAKE) --no-print-directory -C ../ -f Makefile make_locals
 
 # These rules keep make from trying to use the match-anything rule below to
 # rebuild the makefiles--ouch!  Obviously, if you don't follow my convention

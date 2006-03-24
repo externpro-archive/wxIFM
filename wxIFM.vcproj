@@ -1,22 +1,42 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="7.10"
+	Version="8.00"
 	Name="wxIFM"
-	SccProjectName=""
-	SccLocalPath="">
+	ProjectGUID="{5F554641-DFB1-4F8F-AE9E-54E9F92D23ED}"
+	>
 	<Platforms>
 		<Platform
-			Name="Win32"/>
+			Name="Win32"
+		/>
 	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
 			OutputDirectory="$(SolutionDir)lib\_MSVC_$(ConfigurationName)"
 			IntermediateDirectory=".\build\$(ConfigurationName)"
 			ConfigurationType="4"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="FALSE">
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
@@ -24,88 +44,117 @@
 				PreprocessorDefinitions="WIN32;_DEBUG;_LIB"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
-				RuntimeTypeInfo="TRUE"
-				UsePrecompiledHeader="2"
+				RuntimeTypeInfo="true"
+				UsePrecompiledHeader="0"
 				BrowseInformation="1"
 				WarningLevel="4"
-				SuppressStartupBanner="TRUE"
-				DebugInformationFormat="4"/>
+				SuppressStartupBanner="true"
+				DebugInformationFormat="4"
+			/>
 			<Tool
-				Name="VCCustomBuildTool"/>
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1033"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
 			<Tool
 				Name="VCLibrarianTool"
 				OutputFile="$(OutDir)/wxmsw26d_ifm.lib"
 				AdditionalLibraryDirectories="$(WXWIN)lib\vc_lib"
-				SuppressStartupBanner="TRUE"/>
+				SuppressStartupBanner="true"
+			/>
 			<Tool
-				Name="VCMIDLTool"/>
+				Name="VCALinkTool"
+			/>
 			<Tool
-				Name="VCPostBuildEventTool"/>
+				Name="VCXDCMakeTool"
+			/>
 			<Tool
-				Name="VCPreBuildEventTool"/>
+				Name="VCBscMakeTool"
+			/>
 			<Tool
-				Name="VCPreLinkEventTool"/>
+				Name="VCFxCopTool"
+			/>
 			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_DEBUG"
-				Culture="1033"/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"/>
-			<Tool
-				Name="VCManagedWrapperGeneratorTool"/>
-			<Tool
-				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
 			OutputDirectory="$(SolutionDir)lib\_MSVC_$(ConfigurationName)"
 			IntermediateDirectory=".\build\$(ConfigurationName)"
 			ConfigurationType="4"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="FALSE">
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				InlineFunctionExpansion="1"
 				AdditionalIncludeDirectories="include;src/ifm/xpm;&quot;$(WXWIN)\include&quot;;&quot;$(WXWIN)\lib\msw&quot;;&quot;$(WXWIN)\lib\vc_lib\msw&quot;"
 				PreprocessorDefinitions="WIN32;_LIB;NDEBUG"
-				StringPooling="TRUE"
+				StringPooling="true"
 				RuntimeLibrary="0"
-				EnableFunctionLevelLinking="TRUE"
-				RuntimeTypeInfo="TRUE"
-				UsePrecompiledHeader="2"
+				EnableFunctionLevelLinking="true"
+				RuntimeTypeInfo="true"
+				UsePrecompiledHeader="0"
 				BrowseInformation="1"
 				WarningLevel="4"
-				SuppressStartupBanner="TRUE"/>
+				SuppressStartupBanner="true"
+			/>
 			<Tool
-				Name="VCCustomBuildTool"/>
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1033"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
 			<Tool
 				Name="VCLibrarianTool"
 				OutputFile="$(OutDir)/wxmsw26_ifm.lib"
 				AdditionalLibraryDirectories="$(WXWIN)lib\vc_lib"
-				SuppressStartupBanner="TRUE"/>
+				SuppressStartupBanner="true"
+			/>
 			<Tool
-				Name="VCMIDLTool"/>
+				Name="VCALinkTool"
+			/>
 			<Tool
-				Name="VCPostBuildEventTool"/>
+				Name="VCXDCMakeTool"
+			/>
 			<Tool
-				Name="VCPreBuildEventTool"/>
+				Name="VCBscMakeTool"
+			/>
 			<Tool
-				Name="VCPreLinkEventTool"/>
+				Name="VCFxCopTool"
+			/>
 			<Tool
-				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="NDEBUG"
-				Culture="1033"/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"/>
-			<Tool
-				Name="VCManagedWrapperGeneratorTool"/>
-			<Tool
-				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 	</Configurations>
 	<References>
@@ -113,84 +162,110 @@
 	<Files>
 		<Filter
 			Name="Source Files"
-			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+			>
 			<File
-				RelativePath=".\src\ifm\definterface.cpp">
+				RelativePath=".\src\ifm\definterface.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\src\ifm\defplugin.cpp">
+				RelativePath=".\src\ifm\defplugin.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\src\ifm\dragndrop.cpp">
+				RelativePath=".\src\ifm\dragndrop.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\src\ifm\events.cpp">
+				RelativePath=".\src\ifm\events.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\src\ifm\manager.cpp">
+				RelativePath=".\src\ifm\manager.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\src\ifm\plugin.cpp">
+				RelativePath=".\src\ifm\plugin.cpp"
+				>
 			</File>
 			<File
-				RelativePath=".\src\ifm\resize.cpp">
+				RelativePath=".\src\ifm\resize.cpp"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
-			Filter=".h">
+			Filter=".h"
+			>
 			<File
-				RelativePath=".\include\wx\ifm\definterface.h">
+				RelativePath=".\include\wx\ifm\definterface.h"
+				>
 			</File>
 			<File
-				RelativePath=".\include\wx\ifm\defplugin.h">
+				RelativePath=".\include\wx\ifm\defplugin.h"
+				>
 			</File>
 			<File
-				RelativePath=".\include\wx\ifm\dragndrop.h">
+				RelativePath=".\include\wx\ifm\dragndrop.h"
+				>
 			</File>
 			<File
-				RelativePath=".\include\wx\ifm\events.h">
+				RelativePath=".\include\wx\ifm\events.h"
+				>
 			</File>
 			<File
-				RelativePath=".\include\wx\ifm\ifm.h">
+				RelativePath=".\include\wx\ifm\ifm.h"
+				>
 			</File>
 			<File
-				RelativePath=".\include\wx\ifm\ifmdefs.h">
+				RelativePath=".\include\wx\ifm\ifmdefs.h"
+				>
 			</File>
 			<File
-				RelativePath=".\include\wx\ifm\manager.h">
+				RelativePath=".\include\wx\ifm\manager.h"
+				>
 			</File>
 			<File
-				RelativePath=".\include\wx\ifm\plugin.h">
+				RelativePath=".\include\wx\ifm\plugin.h"
+				>
 			</File>
 			<File
-				RelativePath=".\include\wx\ifm\resize.h">
+				RelativePath=".\include\wx\ifm\resize.h"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="docs"
-			Filter=".dox">
+			Filter=".dox"
+			>
 			<File
-				RelativePath=".\docs\building.dox">
+				RelativePath=".\docs\building.dox"
+				>
 			</File>
 			<File
-				RelativePath="docs\coordsystems.dox">
+				RelativePath="docs\coordsystems.dox"
+				>
 			</File>
 			<File
-				RelativePath="docs\internals.dox">
+				RelativePath="docs\internals.dox"
+				>
 			</File>
 			<File
-				RelativePath="docs\main.dox">
+				RelativePath="docs\main.dox"
+				>
 			</File>
 			<File
-				RelativePath="docs\overview.dox">
+				RelativePath="docs\overview.dox"
+				>
 			</File>
 		</Filter>
 		<File
-			RelativePath="changelog.txt">
+			RelativePath="changelog.txt"
+			>
 		</File>
 		<File
-			RelativePath="todo.txt">
+			RelativePath="todo.txt"
+			>
 		</File>
 	</Files>
 	<Globals>

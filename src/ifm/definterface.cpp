@@ -3402,15 +3402,16 @@ void wxIFMTabConfig::set_tab_spacing(int spacing)
 }
 
 wxIFMCaptionConfig::wxIFMCaptionConfig()
-: m_font_color(wxSystemSettings::GetColour(wxSYS_COLOUR_CAPTIONTEXT)),
-m_caption_color(wxSystemSettings::GetColour(wxSYS_COLOUR_ACTIVECAPTION)),
-m_gradient_color(wxSystemSettings::GetColour(wxSYS_COLOUR_GRADIENTACTIVECAPTION)),
-m_style(IFM_CAPTION_SOLID | IFM_CAPTION_LEFT)
+: m_style(IFM_CAPTION_SOLID | IFM_CAPTION_LEFT)
 {
 }
 
 void wxIFMCaptionConfig::init()
 {
+    m_font_color = wxSystemSettings::GetColour(wxSYS_COLOUR_CAPTIONTEXT);
+    m_caption_color = wxSystemSettings::GetColour(wxSYS_COLOUR_ACTIVECAPTION);
+    m_gradient_color = wxSystemSettings::GetColour(wxSYS_COLOUR_GRADIENTACTIVECAPTION);
+
     set_font(wxSystemSettings::GetFont(wxSYS_DEFAULT_GUI_FONT));
 }
 

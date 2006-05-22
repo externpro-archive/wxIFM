@@ -3316,8 +3316,7 @@ wxIFMComponentDataKeyType wxIFMPanelData::DataKey()
 
 
 wxIFMTabConfig::wxIFMTabConfig()
-: m_font_color(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNTEXT)),
-m_indent(2),
+: m_indent(2),
 m_tab_spacing(-1),
 m_rounding_factor(3)
 {
@@ -3326,6 +3325,7 @@ m_rounding_factor(3)
 
 void wxIFMTabConfig::init()
 {
+    m_font_color = wxSystemSettings::GetColour(wxSYS_COLOUR_BTNTEXT);
     set_font(wxSystemSettings::GetFont(wxSYS_DEFAULT_GUI_FONT));
 
     m_tab_border_p = wxPen(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNSHADOW));

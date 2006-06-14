@@ -5,10 +5,15 @@
 # Author:
 #   David Russak
 #
+# Version: $Id$
 # Revisions
 #   ??Dec05 David Russak Created.
 #   26Jan06 David Russak Added comments. WR12069
 #   06Mar06 David Russak Added rule to create locals.mk if needed. 
+#   $Log$
+#   Revision 1.3  2006/06/14 16:33:19  smanders
+#   WR 12486, 12487: MinGW can build Contrib, common 'make' directory in Shared - including single target.mk (others removed), link dependencies improved, support for environment variables having a relative path.
+#
 #
 ################################################################################
 
@@ -23,18 +28,23 @@ else
   SOLUTION_DIR := ..
 endif
 
-include $(SOLUTION_DIR)/make/exports.mk
+ifeq ($(SDL_SHARED2),)
+MAKE_DIR := $(SDL_SHARED)/make
+else
+MAKE_DIR := $(SOLUTION_DIR)/$(SDL_SHARED2)/make
+endif
+include $(MAKE_DIR)/exports.mk
 
-# BIN_PATH is used in this file and in target.mk
-BIN_PATH := $(strip $(SOLUTION_DIR)/$(BIN_DIR))
+# OUTPUT_DIR is used in this file and in target.mk
+OUTPUT_DIR := $(strip $(SOLUTION_DIR)/$(LIB_DIR))
 
 ifeq (,$(filter _%,$(notdir $(CURDIR))))
 
-include target.mk
+include $(MAKE_DIR)/target.mk
 
 else
 
-  include $(BIN_PATH)/locals.mk
+  include $(OUTPUT_DIR)/locals.mk
 
   .SUFFIXES:
 
@@ -43,20 +53,20 @@ else
 
   INC := -I$(SOLUTION_DIR) $(WX_INCLUDES) -I$(SOLUTION_DIR)/wxIFM/include \
          -I$(SOLUTION_DIR)/wxIFM/src/ifm/xpm
-  LIB := $(BIN_PATH)/libWxIFM.a
+  LIB := $(OUTPUT_DIR)/libWxIFM.a
   VPATH := $(SRCDIR) $(SRCDIR)/src/ifm
   USER_SPECIALS := $(INC)
 
   CPP_SRC :=  definterface.cpp defplugin.cpp dragndrop.cpp events.cpp \
               manager.cpp plugin.cpp resize.cpp
 
-  include $(SOLUTION_DIR)/make/obj_dep.mk
+  include $(MAKE_DIR)/obj_dep.mk
 
   # Create the library
   $(LIB): $(C_OBJS) $(CPP_OBJS)
 	  @echo Creating library $(LIB).
 	  $(AR) $(LIB) $(C_OBJS) $(CPP_OBJS)
 
-  include $(SOLUTION_DIR)/make/rules.mk
+  include $(MAKE_DIR)/rules.mk
 
 endif

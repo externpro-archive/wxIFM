@@ -7,13 +7,22 @@
 #
 # Version: $Id$
 # Revisions
-#   ??Dec05 David Russak Created.
-#   26Jan06 David Russak Added comments. WR12069
-#   06Mar06 David Russak Added rule to create locals.mk if needed. 
 #   $Log$
-#   Revision 1.3  2006/06/14 16:33:19  smanders
-#   WR 12486, 12487: MinGW can build Contrib, common 'make' directory in Shared - including single target.mk (others removed), link dependencies improved, support for environment variables having a relative path.
+#   Revision 1.4  2006/06/26 21:19:21  smanders
+#   WR 12486 MinGW support.
+#   Description: \ directory separators are replaced with / in the Makefiles, so
+#   that SDL_SHARED[2] and SDL_CONTRIB[2] can be set to the required \ for MSVC to
+#   work correctly, but still work correctly with MinGW.
+#   Owners code-reviewed? Yes (DaveR).
 #
+#   Revision 1.3  2006/06/14 16:33:19  smanders
+#   WR 12486, 12487: MinGW can build Contrib, common 'make' directory in Shared
+#   - including single target.mk (others removed), link dependencies improved,
+#   support for environment variables having a relative path.
+#
+#   06Mar06 David Russak Added rule to create locals.mk if needed. 
+#   26Jan06 David Russak Added comments. WR12069
+#   ??Dec05 David Russak Created.
 #
 ################################################################################
 
@@ -29,9 +38,9 @@ else
 endif
 
 ifeq ($(SDL_SHARED2),)
-MAKE_DIR := $(SDL_SHARED)/make
+MAKE_DIR := $(subst \,/,$(SDL_SHARED)/make)
 else
-MAKE_DIR := $(SOLUTION_DIR)/$(SDL_SHARED2)/make
+MAKE_DIR := $(subst \,/,$(SOLUTION_DIR)/$(SDL_SHARED2)/make)
 endif
 include $(MAKE_DIR)/exports.mk
 

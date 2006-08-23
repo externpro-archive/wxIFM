@@ -3251,7 +3251,7 @@ wxIFMContainerData::wxIFMContainerData()
     m_buttonManager(0,0)*/
 { }
 
-wxIFMContainerData::wxIFMContainerData(wxIFMInterfacePluginBase *ip, wxIFMComponent *c)
+wxIFMContainerData::wxIFMContainerData(wxIFMInterfacePluginBase* WXUNUSED(ip), wxIFMComponent* WXUNUSED(c))
     : wxIFMExtensionDataBase(),
     //m_buttonManager(ip, c),
     m_orientation(IFM_ORIENTATION_NONE)

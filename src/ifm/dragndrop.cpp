@@ -962,7 +962,11 @@ void wxIFMDefaultDockingPlugin::OnShowDropTargets(wxIFMShowDropTargetsEvent &eve
          floating_data = IFM_GET_EXTENSION_DATA(component, wxIFMFloatingData);
 #endif
 
+#if wxCHECK_VERSION(2,7,0)
+    if( !GetManager()->GetParent()->GetClientRect().Contains(pos) && !component )
+#else
     if( !GetManager()->GetParent()->GetClientRect().Inside(pos) && !component )
+#endif
     {
         ShowComponentDropButtons(false);
         return;
@@ -1110,8 +1114,14 @@ wxIFMDockTargetButton *wxIFMDefaultDockingPlugin::GetDockTargetButtonByPos(const
     {
         btn = m_dockButtonArray[i];
         //btn = *i;
+#if wxCHECK_VERSION(2,7,0)
+        if( btn->IsShown() && btn->GetRect().Contains(pos) )
+#else
         if( btn->IsShown() && btn->GetRect().Inside(pos) )
+#endif
+        {
             return btn;
+        }
     }
 
     return NULL;

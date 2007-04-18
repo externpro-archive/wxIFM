@@ -457,7 +457,9 @@ void wxIFMDefaultResizePlugin::OnPaintDecor(wxIFMPaintEvent &event)
         }
 #endif
 
+#if !wxCHECK_VERSION(2,7,0)
         dc.EndDrawing();
+#endif
     }
 
     event.Skip();
@@ -542,7 +544,11 @@ void wxIFMDefaultResizePlugin::OnSetCursor(wxIFMSetCursorEvent &event)
         wxIFMRectEvent evt(wxEVT_IFM_GETRESIZESASHRECT, component);
         GetIP()->ProcessPluginEvent(evt);
 
+#if wxCHECK_VERSION(2,7,0)
+        if( evt.GetRect().Contains(pos) )
+#else
         if( evt.GetRect().Inside(pos) )
+#endif
         {
             wxIFMResizeData *data = IFM_GET_EXTENSION_DATA(component, wxIFMResizeData);
             switch(data->m_side)
@@ -578,7 +584,11 @@ void wxIFMDefaultResizePlugin::OnLeftDown(wxIFMMouseEvent &event)
     GetIP()->ProcessPluginEvent(rectevt);
     wxRect resize_rect = rectevt.GetRect();
 
+#if wxCHECK_VERSION(2,7,0)
+    if( !resize_rect.Contains(event.GetMouseEvent().GetPosition()) )
+#else
     if( !resize_rect.Inside(event.GetMouseEvent().GetPosition()) )
+#endif
     {
         event.Skip();
         return;

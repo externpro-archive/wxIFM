@@ -513,8 +513,14 @@ void wxIFMDefaultPlugin::OnHitTest(wxIFMHitTestEvent &event)
         }
     }
 
+#if wxCHECK_VERSION(2,7,0)
+    if( rect.Contains(pos) )
+#else
     if( rect.Inside(pos) )
+#endif
+    {
         event.SetPassed();
+    }
 }
 
 void wxIFMDefaultPlugin::OnGetDesiredSize(wxIFMRectEvent &event)

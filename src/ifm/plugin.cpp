@@ -243,7 +243,11 @@ wxIFMComponent *wxIFMInterfacePluginBase::GetComponentByPos(const wxPoint &pos, 
     //ProcessPluginEvent(evt);
 
     //if( evt.GetPassed() )
+#if wxCHECK_VERSION(2,7,0)
+    if( !component->m_hidden && component->m_rect.Contains(pos) )
+#else
     if( !component->m_hidden && component->m_rect.Inside(pos) )
+#endif
     {
         // check children
         wxIFMComponent *ret;

@@ -700,8 +700,11 @@ wxIFMComponent *wxIFMDefaultInterfacePlugin::GetComponentByPos(const wxPoint &po
 
     //wxIFMHitTestEvent evt(component, IFM_COORDS_ABSOLUTE, pos);
     //ProcessPluginEvent(evt);
+#if wxCHECK_VERSION(2,7,0)
+    if( !component->m_hidden && component->m_rect.Contains(pos) )
+#else
     if( !component->m_hidden && component->m_rect.Inside(pos) )
-
+#endif
     //if( evt.GetPassed() )
     {
         // check children
@@ -1542,7 +1545,11 @@ void wxIFMDefaultContainerPlugin::OnLeftDown(wxIFMMouseEvent &event)
         if( !data )
             return;
 
+#if wxCHECK_VERSION(2,7,0)
+        if( data->m_tray_rect.Contains(pos) )
+#else
         if( data->m_tray_rect.Inside(pos) )
+#endif
         {
             wxIFMInitDragEvent evt(component, component, pos);
             GetIP()->ProcessPluginEvent(evt);
@@ -2686,7 +2693,11 @@ void wxIFMDefaultPanelPlugin::OnLeftDown(wxIFMMouseEvent &event)
         //for( wxIFMTabArray::const_iterator i = data->m_tabs.begin(), end = data->m_tabs.end(); i != end; ++i )
         {
             wxIFMTab *tab = data->m_tabs[i];
+#if wxCHECK_VERSION(2,7,0)
+            if( tab->m_visible && tab->m_rect.Contains(event.GetMouseEvent().GetPosition()) )
+#else
             if( tab->m_visible && tab->m_rect.Inside(event.GetMouseEvent().GetPosition()) )
+#endif
             {
                 wxIFMSelectTabEvent evt(component, tab, true);
                 GetIP()->ProcessPluginEvent(evt);
@@ -2695,7 +2706,11 @@ void wxIFMDefaultPanelPlugin::OnLeftDown(wxIFMMouseEvent &event)
         }
 
         // now check for drag initialization hot spots which are the caption and any tab
+#if wxCHECK_VERSION(2,7,0)
+        if( data->m_caption.Contains(pos) )
+#else
         if( data->m_caption.Inside(pos) )
+#endif
         {
             wxIFMInitDragEvent evt(component, component, pos);
             GetIP()->ProcessPluginEvent(evt);
@@ -2707,7 +2722,11 @@ void wxIFMDefaultPanelPlugin::OnLeftDown(wxIFMMouseEvent &event)
             //for(wxIFMTabArray::iterator i = data->m_tabs.begin(), end = data->m_tabs.end(); i != end; ++i )
             {
                 wxIFMTab *tab = data->m_tabs[i];
+#if wxCHECK_VERSION(2,7,0)
+                if( tab->m_visible && tab->m_rect.Contains(pos) )
+#else
                 if( tab->m_visible && tab->m_rect.Inside(pos) )
+#endif
                 {
                     // if we only have one tab drag the panel instead of the tab
                     wxIFMComponent *drag;
@@ -3167,7 +3186,11 @@ void wxIFMComponentButton::OnLeftUp(wxMouseEvent &event)
 
         wxRect rect = GetRect();
         rect.y = rect.x = 0;
+#if wxCHECK_VERSION(2,7,0)
+        if( rect.Contains(event.GetPosition()) )
+#else
         if( rect.Inside(event.GetPosition()) )
+#endif
         {
             // send button press event
             wxIFMComponentButtonEvent evt(wxEVT_IFM_COMPONENTBUTTONCLICK, m_manager->GetComponent(), this);
@@ -3182,7 +3205,11 @@ void wxIFMComponentButton::OnMouseMove(wxMouseEvent &event)
     {
         wxRect rect = GetRect();
         rect.y = rect.x = 0;
+#if wxCHECK_VERSION(2,7,0)
+        SetPressed(rect.Contains(event.GetPosition()));
+#else
         SetPressed(rect.Inside(event.GetPosition()));
+#endif
     }
 }
 

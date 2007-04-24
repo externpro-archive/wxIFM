@@ -15,8 +15,8 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="$(SolutionDir)lib\_MSVC_$(ConfigurationName)"
-			IntermediateDirectory=".\build\$(ConfigurationName)"
+			OutputDirectory="$(SolutionDir)lib\_MSVC_$(PlatformName)_$(ConfigurationName)"
+			IntermediateDirectory=".\build\$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="0"
@@ -40,7 +40,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="include;src/ifm/xpm;&quot;$(WXWIN)\include&quot;;&quot;$(WXWIN)\include\wxwidgets&quot;;&quot;$(WXWIN)\lib\mswd&quot;;&quot;$(WXWIN)\lib\vc_lib\mswd&quot;"
+				AdditionalIncludeDirectories="include;src/ifm/xpm;&quot;$(WXWIN)\include&quot;;&quot;$(WXWIN)\include\wxwidgets&quot;;&quot;$(WXWIN)\lib\mswd&quot;;&quot;$(WXWIN)\lib\vc_lib\mswd&quot;;&quot;$(WXWIN)\lib_$(PlatformName)\vc_lib\mswd&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_LIB;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -86,8 +86,8 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="$(SolutionDir)lib\_MSVC_$(ConfigurationName)"
-			IntermediateDirectory=".\build\$(ConfigurationName)"
+			OutputDirectory="$(SolutionDir)lib\_MSVC_$(PlatformName)_$(ConfigurationName)"
+			IntermediateDirectory=".\build\$(PlatformName)_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="0"
@@ -112,7 +112,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				InlineFunctionExpansion="1"
-				AdditionalIncludeDirectories="include;src/ifm/xpm;&quot;$(WXWIN)\include&quot;;&quot;$(WXWIN)\include\wxwidgets&quot;;&quot;$(WXWIN)\lib\msw&quot;;&quot;$(WXWIN)\lib\vc_lib\msw&quot;"
+				AdditionalIncludeDirectories="include;src/ifm/xpm;&quot;$(WXWIN)\include&quot;;&quot;$(WXWIN)\include\wxwidgets&quot;;&quot;$(WXWIN)\lib\msw&quot;;&quot;$(WXWIN)\lib\vc_lib\msw&quot;;&quot;$(WXWIN)\lib_$(PlatformName)\vc_lib\msw&quot;"
 				PreprocessorDefinitions="WIN32;_LIB;NDEBUG;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE"
 				StringPooling="true"
 				RuntimeLibrary="0"
@@ -158,8 +158,8 @@
 		</Configuration>
 		<Configuration
 			Name="ReleaseDLL|Win32"
-			OutputDirectory="$(SolutionDir)lib\_MSVC_$(ConfigurationName)"
-			IntermediateDirectory=".\build\$(ConfigurationName)"
+			OutputDirectory="$(SolutionDir)lib\_MSVC_$(PlatformName)_$(ConfigurationName)"
+			IntermediateDirectory=".\build\$(PlatformName)_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="0"
@@ -184,7 +184,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				InlineFunctionExpansion="1"
-				AdditionalIncludeDirectories="include;src/ifm/xpm;&quot;$(WXWIN)\include&quot;;&quot;$(WXWIN)\include\wxwidgets&quot;;&quot;$(WXWIN)\lib\msw&quot;;&quot;$(WXWIN)\lib\vc_dll\msw&quot;"
+				AdditionalIncludeDirectories="include;src/ifm/xpm;&quot;$(WXWIN)\include&quot;;&quot;$(WXWIN)\include\wxwidgets&quot;;&quot;$(WXWIN)\lib\msw&quot;;&quot;$(WXWIN)\lib\vc_dll\msw&quot;;&quot;$(WXWIN)\lib_$(PlatformName)\vc_dll\msw&quot;"
 				PreprocessorDefinitions="WIN32;_LIB;NDEBUG;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE"
 				StringPooling="true"
 				RuntimeLibrary="2"

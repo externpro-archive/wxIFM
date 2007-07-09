@@ -62,7 +62,7 @@ else
 
   INC := -I$(SOLUTION_DIR) $(WX_INCLUDES) -I$(SOLUTION_DIR)/wxIFM/include \
          -I$(SOLUTION_DIR)/wxIFM/src/ifm/xpm
-  LIB := $(OUTPUT_DIR)/libWxIFM.a
+  LIB := $(OUTPUT_DIR)/libWxIFM$(BLD_LTR).a
   VPATH := $(SRCDIR) $(SRCDIR)/src/ifm
   USER_SPECIALS := $(INC)
 

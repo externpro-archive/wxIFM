@@ -61,7 +61,7 @@ else
   # directory. It uses VPATH to find the source files.
 
   INC := -I$(SOLUTION_DIR) $(WX_INCLUDES) -I$(SOLUTION_DIR)/wxIFM/include \
-         -I$(SOLUTION_DIR)/wxIFM/src/ifm/xpm
+         -I$(SOLUTION_DIR)/wxIFM/src/ifm/xpm -I$(SDL_EXTERN)/include
   LIB := $(OUTPUT_DIR)/libWxIFM$(BLD_LTR).a
   VPATH := $(SRCDIR) $(SRCDIR)/src/ifm
   USER_SPECIALS := $(INC)

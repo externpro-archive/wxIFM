@@ -37,11 +37,12 @@ else
   SOLUTION_DIR := ..
 endif
 
-ifeq ($(SDL_SHARED2),)
-MAKE_DIR := $(subst \,/,$(SDL_SHARED)/make)
-else
-MAKE_DIR := $(subst \,/,$(SOLUTION_DIR)/$(SDL_SHARED2)/make)
+SHARED_DIR := $(SOLUTION_DIR)/../Shared
+MAKE_DIR := $(SHARED_DIR)/make
+ifeq ($(SDL_EXTERN),)
+  SDL_EXTERN := $(SOLUTION_DIR)/../sdlExtern
 endif
+
 include $(MAKE_DIR)/exports.mk
 
 # OUTPUT_DIR is used in this file and in target.mk

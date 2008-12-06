@@ -19,7 +19,7 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="$(SolutionDir)lib_$(PlatformName)\vc_lib"
+			OutputDirectory="$(SolutionDir)lib_$(PlatformName)"
 			IntermediateDirectory="_MSVC_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
@@ -69,7 +69,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="$(OutDir)/wxmsw26d_ifm.lib"
+				OutputFile="$(OutDir)/wxmswd_ifm.lib"
 				AdditionalLibraryDirectories=""
 				SuppressStartupBanner="true"
 			/>
@@ -92,7 +92,7 @@
 		</Configuration>
 		<Configuration
 			Name="Debug|x64"
-			OutputDirectory="$(SolutionDir)lib_$(PlatformName)\vc_lib"
+			OutputDirectory="$(SolutionDir)lib_$(PlatformName)"
 			IntermediateDirectory="_MSVC_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
@@ -142,7 +142,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="$(OutDir)/wxmsw26d_ifm.lib"
+				OutputFile="$(OutDir)/wxmswd_ifm.lib"
 				AdditionalLibraryDirectories=""
 				SuppressStartupBanner="true"
 			/>
@@ -165,7 +165,7 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="$(SolutionDir)lib_$(PlatformName)\vc_lib"
+			OutputDirectory="$(SolutionDir)lib_$(PlatformName)"
 			IntermediateDirectory="_MSVC_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
@@ -216,7 +216,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="$(OutDir)/wxmsw26_ifm.lib"
+				OutputFile="$(OutDir)/wxmsws_ifm.lib"
 				AdditionalLibraryDirectories=""
 				SuppressStartupBanner="true"
 			/>
@@ -239,7 +239,7 @@
 		</Configuration>
 		<Configuration
 			Name="Release|x64"
-			OutputDirectory="$(SolutionDir)lib_$(PlatformName)\vc_lib"
+			OutputDirectory="$(SolutionDir)lib_$(PlatformName)"
 			IntermediateDirectory="_MSVC_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
@@ -290,7 +290,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="$(OutDir)/wxmsw26_ifm.lib"
+				OutputFile="$(OutDir)/wxmsws_ifm.lib"
 				AdditionalLibraryDirectories=""
 				SuppressStartupBanner="true"
 			/>
@@ -313,7 +313,7 @@
 		</Configuration>
 		<Configuration
 			Name="ReleaseDLL|Win32"
-			OutputDirectory="$(SolutionDir)lib_$(PlatformName)\vc_dll"
+			OutputDirectory="$(SolutionDir)lib_$(PlatformName)"
 			IntermediateDirectory="_MSVC_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
@@ -364,7 +364,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="$(OutDir)/wxmsw26_ifm.lib"
+				OutputFile="$(OutDir)/wxmsw_ifm.lib"
 				AdditionalLibraryDirectories=""
 				SuppressStartupBanner="true"
 			/>
@@ -387,7 +387,7 @@
 		</Configuration>
 		<Configuration
 			Name="ReleaseDLL|x64"
-			OutputDirectory="$(SolutionDir)lib_$(PlatformName)\vc_dll"
+			OutputDirectory="$(SolutionDir)lib_$(PlatformName)"
 			IntermediateDirectory="_MSVC_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="4"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
@@ -438,7 +438,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="$(OutDir)/wxmsw26_ifm.lib"
+				OutputFile="$(OutDir)/wxmsw_ifm.lib"
 				AdditionalLibraryDirectories=""
 				SuppressStartupBanner="true"
 			/>

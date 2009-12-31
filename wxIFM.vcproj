@@ -87,7 +87,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="cd $(SolutionDir)&#x0D;&#x0A;if exist include\wx\ifm goto theend&#x0D;&#x0A;mkdir include\wx\ifm&#x0D;&#x0A;echo &quot;Copying file(s) into include\wx\ifm&quot;&#x0D;&#x0A;copy $(ProjectDir)include\wx\ifm\*.h include\wx\ifm&#x0D;&#x0A;:theend&#x0D;&#x0A;"
+				CommandLine="REM pushd works for case where $(SolutionDir) is a UNC path (cd doesn&apos;t work)&#x0D;&#x0A;pushd $(SolutionDir)&#x0D;&#x0A;if exist include\wx\ifm goto theend&#x0D;&#x0A;mkdir include\wx\ifm&#x0D;&#x0A;echo &quot;Copying file(s) into include\wx\ifm&quot;&#x0D;&#x0A;REM triple quotes for case where $(ProjectDir) is a UNC path with spaces&#x0D;&#x0A;copy &quot;&quot;&quot;$(ProjectDir)include\wx\ifm\*.h&quot;&quot;&quot; include\wx\ifm&#x0D;&#x0A;:theend&#x0D;&#x0A;popd"
 			/>
 		</Configuration>
 		<Configuration
@@ -161,7 +161,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="cd $(SolutionDir)&#x0D;&#x0A;if exist include\wx\ifm goto theend&#x0D;&#x0A;mkdir include\wx\ifm&#x0D;&#x0A;echo &quot;Copying file(s) into include\wx\ifm&quot;&#x0D;&#x0A;copy $(ProjectDir)include\wx\ifm\*.h include\wx\ifm&#x0D;&#x0A;:theend&#x0D;&#x0A;"
+				CommandLine="REM pushd works for case where $(SolutionDir) is a UNC path (cd doesn&apos;t work)&#x0D;&#x0A;pushd $(SolutionDir)&#x0D;&#x0A;if exist include\wx\ifm goto theend&#x0D;&#x0A;mkdir include\wx\ifm&#x0D;&#x0A;echo &quot;Copying file(s) into include\wx\ifm&quot;&#x0D;&#x0A;REM triple quotes for case where $(ProjectDir) is a UNC path with spaces&#x0D;&#x0A;copy &quot;&quot;&quot;$(ProjectDir)include\wx\ifm\*.h&quot;&quot;&quot; include\wx\ifm&#x0D;&#x0A;:theend&#x0D;&#x0A;popd"
 			/>
 		</Configuration>
 		<Configuration
@@ -235,7 +235,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="cd $(SolutionDir)&#x0D;&#x0A;if exist include\wx\ifm goto theend&#x0D;&#x0A;mkdir include\wx\ifm&#x0D;&#x0A;echo &quot;Copying file(s) into include\wx\ifm&quot;&#x0D;&#x0A;copy $(ProjectDir)include\wx\ifm\*.h include\wx\ifm&#x0D;&#x0A;:theend&#x0D;&#x0A;"
+				CommandLine="REM pushd works for case where $(SolutionDir) is a UNC path (cd doesn&apos;t work)&#x0D;&#x0A;pushd $(SolutionDir)&#x0D;&#x0A;if exist include\wx\ifm goto theend&#x0D;&#x0A;mkdir include\wx\ifm&#x0D;&#x0A;echo &quot;Copying file(s) into include\wx\ifm&quot;&#x0D;&#x0A;REM triple quotes for case where $(ProjectDir) is a UNC path with spaces&#x0D;&#x0A;copy &quot;&quot;&quot;$(ProjectDir)include\wx\ifm\*.h&quot;&quot;&quot; include\wx\ifm&#x0D;&#x0A;:theend&#x0D;&#x0A;popd"
 			/>
 		</Configuration>
 		<Configuration
@@ -310,7 +310,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="cd $(SolutionDir)&#x0D;&#x0A;if exist include\wx\ifm goto theend&#x0D;&#x0A;mkdir include\wx\ifm&#x0D;&#x0A;echo &quot;Copying file(s) into include\wx\ifm&quot;&#x0D;&#x0A;copy $(ProjectDir)include\wx\ifm\*.h include\wx\ifm&#x0D;&#x0A;:theend&#x0D;&#x0A;"
+				CommandLine="REM pushd works for case where $(SolutionDir) is a UNC path (cd doesn&apos;t work)&#x0D;&#x0A;pushd $(SolutionDir)&#x0D;&#x0A;if exist include\wx\ifm goto theend&#x0D;&#x0A;mkdir include\wx\ifm&#x0D;&#x0A;echo &quot;Copying file(s) into include\wx\ifm&quot;&#x0D;&#x0A;REM triple quotes for case where $(ProjectDir) is a UNC path with spaces&#x0D;&#x0A;copy &quot;&quot;&quot;$(ProjectDir)include\wx\ifm\*.h&quot;&quot;&quot; include\wx\ifm&#x0D;&#x0A;:theend&#x0D;&#x0A;popd"
 			/>
 		</Configuration>
 		<Configuration
@@ -384,7 +384,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="cd $(SolutionDir)&#x0D;&#x0A;if exist include\wx\ifm goto theend&#x0D;&#x0A;mkdir include\wx\ifm&#x0D;&#x0A;echo &quot;Copying file(s) into include\wx\ifm&quot;&#x0D;&#x0A;copy $(ProjectDir)include\wx\ifm\*.h include\wx\ifm&#x0D;&#x0A;:theend&#x0D;&#x0A;"
+				CommandLine="REM pushd works for case where $(SolutionDir) is a UNC path (cd doesn&apos;t work)&#x0D;&#x0A;pushd $(SolutionDir)&#x0D;&#x0A;if exist include\wx\ifm goto theend&#x0D;&#x0A;mkdir include\wx\ifm&#x0D;&#x0A;echo &quot;Copying file(s) into include\wx\ifm&quot;&#x0D;&#x0A;REM triple quotes for case where $(ProjectDir) is a UNC path with spaces&#x0D;&#x0A;copy &quot;&quot;&quot;$(ProjectDir)include\wx\ifm\*.h&quot;&quot;&quot; include\wx\ifm&#x0D;&#x0A;:theend&#x0D;&#x0A;popd"
 			/>
 		</Configuration>
 		<Configuration
@@ -459,7 +459,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="cd $(SolutionDir)&#x0D;&#x0A;if exist include\wx\ifm goto theend&#x0D;&#x0A;mkdir include\wx\ifm&#x0D;&#x0A;echo &quot;Copying file(s) into include\wx\ifm&quot;&#x0D;&#x0A;copy $(ProjectDir)include\wx\ifm\*.h include\wx\ifm&#x0D;&#x0A;:theend&#x0D;&#x0A;"
+				CommandLine="REM pushd works for case where $(SolutionDir) is a UNC path (cd doesn&apos;t work)&#x0D;&#x0A;pushd $(SolutionDir)&#x0D;&#x0A;if exist include\wx\ifm goto theend&#x0D;&#x0A;mkdir include\wx\ifm&#x0D;&#x0A;echo &quot;Copying file(s) into include\wx\ifm&quot;&#x0D;&#x0A;REM triple quotes for case where $(ProjectDir) is a UNC path with spaces&#x0D;&#x0A;copy &quot;&quot;&quot;$(ProjectDir)include\wx\ifm\*.h&quot;&quot;&quot; include\wx\ifm&#x0D;&#x0A;:theend&#x0D;&#x0A;popd"
 			/>
 		</Configuration>
 	</Configurations>

@@ -620,7 +620,11 @@ void wxIFMFloatingWindowBase::OnMouseEvent(wxMouseEvent &event)
 
 void wxIFMFloatingWindowBase::OnShow(wxShowEvent &event)
 {
+#if wxCHECK_VERSION(2,9,0)
+    m_component->Show(event.IsShown(), true);
+#else
     m_component->Show(event.GetShow(), true);
+#endif
 }
 
 void wxIFMFloatingWindowBase::OnEraseBg(wxEraseEvent &WXUNUSED(event))
@@ -781,7 +785,11 @@ void wxIFMComponent::Paint(wxDC &dc, const wxRegion &region)
 
     // set clipping region of DC
     dc.DestroyClippingRegion();
+#if wxCHECK_VERSION(2,9,0)
+    dc.SetDeviceClippingRegion(region);
+#else
     dc.SetClippingRegion(region);
+#endif
 
     // paint background first
     wxIFMPaintEvent bgevt(wxEVT_IFM_PAINTBG, this, region, dc);

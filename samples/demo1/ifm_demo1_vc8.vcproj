@@ -2,7 +2,7 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="8.00"
-	Name="demo1"
+	Name="ifm_demo1"
 	ProjectGUID="{9DE82691-3E15-4BD3-B668-69AEC47CC399}"
 	RootNamespace="demo1"
 	>
@@ -16,8 +16,8 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="$(ConfigurationName)"
-			IntermediateDirectory="$(ConfigurationName)"
+			OutputDirectory="_vc8_$(PlatformName)_$(ConfigurationName)"
+			IntermediateDirectory="_vc8_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="1"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="0"
@@ -47,16 +47,16 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\include;..\..\;&quot;$(WXWIN)\include&quot;;&quot;$(WXWIN)\lib\mswd&quot;;&quot;$(WXWIN)\lib\vc_lib\mswd&quot;"
+				AdditionalIncludeDirectories="../../include;&quot;$(ProjectDir)../../..&quot;;&quot;$(ProjectDir)../../../../include&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
 				RuntimeTypeInfo="true"
 				UsePrecompiledHeader="0"
 				PrecompiledHeaderFile=".\Debug/demo1.pch"
-				AssemblerListingLocation=".\Debug/"
-				ObjectFile=".\Debug/"
-				ProgramDataBaseFileName=".\Debug/"
+				AssemblerListingLocation="$(IntDir)\"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="$(OutDir)\$(ProjectName).pdb"
 				BrowseInformation="1"
 				WarningLevel="4"
 				SuppressStartupBanner="true"
@@ -75,11 +75,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="wxmsw26d_ifm.lib wxmsw26d_core.lib wxbase26d.lib wxexpatd.lib wxmsw26d_adv.lib odbc32.lib odbccp32.lib comctl32.lib rpcrt4.lib winmm.lib wsock32.lib"
-				OutputFile="$(OUTDIR)/demo1.exe"
+				OutputFile="$(OutDir)/$(ProjectName).exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
-				AdditionalLibraryDirectories="&quot;$(WXWIN)\lib&quot;;&quot;$(WXWIN)\lib\vc_lib&quot;;&quot;..\..\lib\_MSVC_$(ConfigurationName)&quot;"
+				AdditionalLibraryDirectories="$(ProjectDir)../../../../lib/vc_lib"
 				IgnoreDefaultLibraryNames=""
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile="$(OUTDIR)/demo1.pdb"
@@ -113,8 +112,8 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="$(ConfigurationName)"
-			IntermediateDirectory="$(ConfigurationName)"
+			OutputDirectory="_vc8_$(PlatformName)_$(ConfigurationName)"
+			IntermediateDirectory="_vc8_$(PlatformName)_$(ConfigurationName)"
 			ConfigurationType="1"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
 			UseOfMFC="0"
@@ -145,7 +144,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				InlineFunctionExpansion="1"
-				AdditionalIncludeDirectories="..\..\include;..\..\;&quot;$(WXWIN)\include&quot;;&quot;$(WXWIN)\lib\msw&quot;;&quot;$(WXWIN)\lib\vc_lib\msw&quot;"
+				AdditionalIncludeDirectories="../../include;&quot;$(ProjectDir)../../..&quot;;&quot;$(ProjectDir)../../../../include&quot;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE"
 				StringPooling="true"
 				RuntimeLibrary="0"
@@ -153,9 +152,9 @@
 				RuntimeTypeInfo="true"
 				UsePrecompiledHeader="0"
 				PrecompiledHeaderFile=".\Release/demo1.pch"
-				AssemblerListingLocation=".\Release/"
-				ObjectFile=".\Release/"
-				ProgramDataBaseFileName=".\Release/"
+				AssemblerListingLocation="$(IntDir)\"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="$(OutDir)\$(ProjectName).pdb"
 				WarningLevel="4"
 				SuppressStartupBanner="true"
 			/>
@@ -172,11 +171,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="wxmsw26_ifm.lib wxmsw26_core.lib wxbase26.lib wxexpat.lib wxmsw26_adv.lib odbc32.lib odbccp32.lib comctl32.lib rpcrt4.lib winmm.lib wsock32.lib"
-				OutputFile="$(OUTDIR)/demo1.exe"
+				OutputFile="$(OutDir)/$(ProjectName).exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
-				AdditionalLibraryDirectories="&quot;$(WXWIN)\lib&quot;;&quot;$(WXWIN)\lib\vc_lib&quot;;&quot;..\..\lib\_MSVC_$(ConfigurationName)&quot;"
+				AdditionalLibraryDirectories="$(ProjectDir)../../../../lib/vc_lib"
 				ProgramDatabaseFile="$(OUTDIR)/demo1.pdb"
 				SubSystem="2"
 				TargetMachine="1"

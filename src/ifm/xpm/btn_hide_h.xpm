@@ -1,5 +1,5 @@
 /* XPM */
-static char *btn_hide_h_xpm[] = {
+static const char *btn_hide_h_xpm[] = {
 /* columns rows colors chars-per-pixel */
 "10 11 2 1",
 "x c #404040",

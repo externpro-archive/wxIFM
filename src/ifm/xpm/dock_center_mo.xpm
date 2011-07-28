@@ -1,5 +1,5 @@
 /* XPM */
-static char *dock_center_mo_xpm[] = {
+static const char *dock_center_mo_xpm[] = {
 /* columns rows colors chars-per-pixel */
 "20 20 5 1",
 "  c black",

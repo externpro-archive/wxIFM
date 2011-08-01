@@ -289,12 +289,12 @@ wxIFMComponent *wxIFMInterfacePluginBase::GetFloatingComponentByPos(const wxPoin
 void wxIFMInterfacePluginBase::AddChildWindow(wxWindow *window, wxIFMComponent *component)
 {
     // store the child window / component pair
-    m_windows[(int)window] = component;
+    m_windows[(size_t)window] = component;
 }
 
 wxIFMComponent *wxIFMInterfacePluginBase::FindChildWindow(wxWindow *window)
 {
-    return m_windows[(int)window];
+    return m_windows[(size_t)window];
 }
 
 void wxIFMInterfacePluginBase::OnMouseEvent(wxMouseEvent &event)

@@ -1,0 +1,34 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: wxIFM - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "link.exe -lib /nologo /out:"lib/vc_lib/wxmsw26d_ifm.lib"  ".\Debug\definterface.obj" ".\Debug\defplugin.obj" ".\Debug\dragndrop.obj" ".\Debug\events.obj" ".\Debug\manager.obj" ".\Debug\plugin.obj" ".\Debug\resize.obj" "
+<h3>Output Window</h3>
+Creating library...
+<h3>
+--------------------Configuration: demo1 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\SNAKEC~1\LOCALS~1\Temp\RSPCC.tmp" with contents
+[
+wxmsw26d_ifm.lib wxmsw26d_core.lib wxbase26d.lib wxexpatd.lib wxmsw26d_adv.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib comctl32.lib rpcrt4.lib winmm.lib wsock32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/demo1.pdb" /debug /machine:I386 /out:"Debug/demo1.exe" /pdbtype:sept 
+".\Debug\main.obj"
+"\C++\wxIFM\lib\vc_lib\wxmsw26d_ifm.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\SNAKEC~1\LOCALS~1\Temp\RSPCC.tmp"
+<h3>Output Window</h3>
+Linking...
+LINK : warning LNK4224: /PDBTYPE is no longer supported;  ignored
+LINK : warning LNK4224: /PDBTYPE is no longer supported;  ignored
+
+
+
+<h3>Results</h3>
+demo1.exe - 0 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

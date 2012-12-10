@@ -17,7 +17,7 @@ ifeq ($(CFG),Debug)
   OBJ_DIR = Debug
   OUTPUT_DIR = ./lib
   TARGET = libwx_gtk2_ifm-2.6d.a
-  C_INCLUDE_DIRS = -I"./include" -I"./" -I"./icons"
+  C_INCLUDE_DIRS = -I"./include" -I"./" 
   C_PREPROC = 
   CFLAGS = -pipe `wx-config --cxxflags` -Wall -g2 -O0 -frtti -fexceptions 
   ARFLAGS =  rcs
@@ -27,7 +27,7 @@ ifeq ($(CFG),Release)
   OBJ_DIR = Release
   OUTPUT_DIR = ./lib
   TARGET = libwx_gtk2_ifm-2.6.a
-  C_INCLUDE_DIRS = -I"./include" -I"./" -I"./icons"
+  C_INCLUDE_DIRS = -I"./include" -I"./" 
   C_PREPROC = 
   CFLAGS = -pipe `wx-config --cxxflags` -Wall -g0 -O2 -frtti -fexceptions 
   ARFLAGS =  rcs

@@ -1,17 +1,10 @@
 set(lib_name ifm)
-set(wx_dir ${CMAKE_CURRENT_SOURCE_DIR}/../..)
 #######################################
 # include directories
-include_directories( 
-  ${wx_dir}/include
+include_directories(
   include
   src/ifm/xpm
-)
-if(MSVC)
-  include_directories(
-    ${wx_dir}/wxx # to find the MSVC-specific wx/setup.h
   )
-endif()
 #######################################
 # library sources
 ########################
@@ -22,7 +15,7 @@ set(docs_srcs
   docs/internals.dox
   docs/main.dox
   docs/overview.dox
-)
+  )
 source_group(docs FILES ${docs_srcs})
 list(APPEND ${lib_name}_libsrcs ${docs_srcs})
 ########################
@@ -37,7 +30,7 @@ set(ifm_hdrs
   include/wx/ifm/manager.h
   include/wx/ifm/plugin.h
   include/wx/ifm/resize.h
-)
+  )
 list(APPEND ${lib_name}_libsrcs ${ifm_hdrs})
 ########################
 # source
@@ -49,17 +42,20 @@ set(ifm_srcs
   src/ifm/manager.cpp
   src/ifm/plugin.cpp
   src/ifm/resize.cpp
-)
+  )
 list(APPEND ${lib_name}_libsrcs ${ifm_srcs})
 ########################
 # source
 set(ifm_misc
   changelog.txt
   todo.txt
-)
+  )
 list(APPEND ${lib_name}_libsrcs ${ifm_misc})
 #######################################
 # library
 add_library(${lib_name} STATIC ${${lib_name}_libsrcs})
 set_target_properties(${lib_name} PROPERTIES OUTPUT_NAME ${wxbasename}_${lib_name}-${wxversion})
-
+#######################################
+# install
+install(TARGETS ${lib_name} DESTINATION lib${NUMBITS})
+install(FILES ${ifm_hdrs} DESTINATION include/wx/ifm)

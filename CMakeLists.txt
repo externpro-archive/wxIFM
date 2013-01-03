@@ -54,7 +54,7 @@ list(APPEND ${lib_name}_libsrcs ${ifm_misc})
 #######################################
 # library
 add_library(${lib_name} STATIC ${${lib_name}_libsrcs})
-set_target_properties(${lib_name} PROPERTIES OUTPUT_NAME ${wxbasename}_${lib_name}-${wxversion})
+set_wxxtarget_properties(${lib_name})
 #######################################
 # install
 install(TARGETS ${lib_name} DESTINATION lib${NUMBITS})

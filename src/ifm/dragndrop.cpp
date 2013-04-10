@@ -750,8 +750,8 @@ void wxIFMDefaultDockingPlugin::OnDock(wxIFMDockEvent &event)
 
         wxIFMComponent *dest = evt->GetDestination();
 
-        if( dest->m_alignment == IFM_ALIGN_HORIZONTAL && where == IFM_DOCK_ID_RIGHT ||
-            dest->m_alignment == IFM_ALIGN_VERTICAL &&  where == IFM_DOCK_ID_BOTTOM )
+        if( (dest->m_alignment == IFM_ALIGN_HORIZONTAL && where == IFM_DOCK_ID_RIGHT) ||
+            (dest->m_alignment == IFM_ALIGN_VERTICAL &&  where == IFM_DOCK_ID_BOTTOM) )
         {
             evt->SetIndex(index + 1);
         }

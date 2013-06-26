@@ -28,6 +28,7 @@
 #include "dock_center.xpm"
 #include "dock_center_mo.xpm"
 
+#include "wx/dcclient.h"
 #include "wx/msgdlg.h"
 #include "wx/settings.h"
 

@@ -30,6 +30,7 @@
 #include "btn_min_hp.xpm"
 #include "btn_max_hp.xpm"
 
+#include "wx/dcclient.h"
 #include "wx/settings.h"
 
 #include "wx/listimpl.cpp"

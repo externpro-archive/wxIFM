@@ -58,4 +58,4 @@ set_wxxtarget_properties(${lib_name})
 #######################################
 # install
 install(TARGETS ${lib_name} DESTINATION lib${NUMBITS})
-install(FILES ${ifm_hdrs} DESTINATION include/wx/ifm)
+install(FILES ${ifm_hdrs} DESTINATION include/${wxinc}/wx/ifm)
